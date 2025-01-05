@@ -59,14 +59,19 @@ function Navbar(){
 
                 {/* mobile nav */}
                 <div className="lg:hidden">
-                    <div className="font-bold text-2xl relative z-30" onClick={() => setNavOpen((prevState: boolean) => !prevState)}>
-                        { navOpen ? <MdClose className="text-white"/> : <HiMenuAlt4 />}
+                    <div className="font-bold text-4xl relative" onClick={() => setNavOpen((prevState: boolean) => !prevState)}>
+                        <HiMenuAlt4 />
                     </div>
                     {/* mobile slide nav */}
-                    <div className={`flex flex-col gap-4 absolute duration-200 ease-in-out right-[-1000px] top-0 opacity-0 z-10 ${navOpen && "left-0 opacity-100"} w-full p-5 bg-orange-600 text-white`}>
-                        <div className="flex items-center gap-3 w-fit">
-                            <img src={logo} alt="" className="rounded-full w-12 h-12 border-4 border-white"/>
-                            <p className={`font-bold text-xl`}>Tripps<span className={`text-black`}>Drips</span></p>
+                    <div className={`${navOpen ? 'block' : 'hidden'} bg-black bg-opacity-60 backdrop-blur-sm w-screen h-screen absolute left-0 top-0`}/>
+                    <div className={`flex flex-col gap-8 space-y-8 absolute duration-300 ease-in-out transform shadow-md 
+                        ${navOpen ? "translate-x-0" : "-translate-x-full"} top-0 left-0  w-fit p-5 bg-black text-white h-screen`}>
+                        <div className="w-full flex items-center justify-between">
+                            <div className="flex items-center gap-3 w-fit">
+                                <img src={logo} alt="" className="rounded-full w-12 h-12 border-4 border-white"/>
+                                <p className={`font-bold text-xl`}>Tripps<span className={`text-orange-600`}>Drips</span></p>
+                            </div>
+                            <MdClose className="text-white font-bold text-4xl" onClick={() => setNavOpen((prevState: boolean) => !prevState)}/>
                         </div>
                         <div className="flex items-center justify-between gap-6">
                             <label htmlFor="search" className="">
@@ -79,11 +84,11 @@ function Navbar(){
                             <FaShoppingBag className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear cursor-pointer"/>
                             <IoPerson className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear cursor-pointer"/>
                         </div>
-                        <div className="flex flex-col items-start gap-4 font-semibold text-lg">
-                            <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear">Men</a>
-                            <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear">Women</a>
-                            <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear">Categories</a>
-                            <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear">Brands</a>
+                        <div className="flex flex-col items-start gap-4 space-y-8 font-semibold text-3xl uppercase">
+                            <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline">Men</a>
+                            <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline">Women</a>
+                            <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline">Categories</a>
+                            <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline">Brands</a>
                         </div>
                     </div>
                 </div>

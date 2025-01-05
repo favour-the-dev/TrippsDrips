@@ -151,12 +151,12 @@ function ProductDisplay(){
                                         </label>
                                         <label 
                                         className="flex items-center gap-1"
-                                        htmlFor="Addidas">
+                                        htmlFor="Adidas">
                                             <input 
                                             type="checkbox" 
-                                            name="Addidas" 
-                                            value="Addidas"/>
-                                            Addidas
+                                            name="Adidas" 
+                                            value="Adidas"/>
+                                            Adidas
                                         </label>
                                         <label 
                                         className="flex items-center gap-1"
@@ -292,26 +292,25 @@ function ProductDisplay(){
                 </div>
 
                 {/* product grid */}
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 content-center place-items-center min-h-max my-5">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 space-y-4 md:space-y-0 gap-12 content-center place-items-center min-h-max my-5">
                     {
                         products.map((product, index)=>{
                             return(
                                 <ProductCard
                                 key={index}
-                                imageUrls={[product.imageUrls[0], product.imageUrls[1]]}
+                                imageUrls={Array.from(product.imageUrls)}
                                 discountVal={product.discountVal}
                                 productTitle={product.productTitle}
                                 productBrand={product.productBrand}
                                 productPrice={product.productPrice}
-                                colors={[product.colors[0], product.colors[1]]}
+                                colors={Array.from(product.colors)}
                                 />
                             )
                         })
                     }
                 </div>
                 
-                {/* tn */}
-                <button className="btn-transparent self-center mt-12">See all Products</button>
+                <button className="btn-transparent self-center md:mt-5">See all Products</button>
             </div>
         </>
     )
