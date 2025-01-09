@@ -8,7 +8,7 @@ function Collection(){
             <div className="h-full my-10 max-cont flex flex-col gap-12">
                 {/* text */}
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-                    <h2 className="md:w-1/2 font-bold capitalize text-5xl">New Style For Latest Collection</h2>
+                    <h2 className="md:w-1/2 font-semibold capitalize text-5xl">New Style For Latest Collection</h2>
                     <p className="md:w-1/2 text-gray-500 text-xl">Discover Our latest colection of clothing, shoes, accessories, 
                         that are perfect, for any occasion. 
                         From casual wear to formal attire. 

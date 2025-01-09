@@ -9,7 +9,7 @@ function Navbar(){
     const [navOpen, setNavOpen] = useState<boolean>(false);
     const [scrolled, setIsScrolled] = useState<boolean>(false);
 
-    function handleNavScrolled() {
+    function handleScroll() {
         if (window.scrollY > 0) {
             setIsScrolled(true);
         } else {
@@ -17,15 +17,17 @@ function Navbar(){
         }
         console.log("ScrollY:", window.scrollY); // Debug current scroll position
     }
-    useEffect(() => {
-        window.addEventListener('scroll', handleNavScrolled);
-        return () => {
-            window.removeEventListener('scroll', handleNavScrolled);
-        };
+    
+        useEffect(() => {
+            window.addEventListener("scroll", handleScroll)
+
+            return () => {
+                window.removeEventListener("scroll", handleScroll);
+            };
     }, []);
     return (
     <>
-        <nav className={`flex items-center justify-center sticky top-0 z-40 bg-white ${scrolled && 'bg-orange-600'}`}>
+        <nav className={`flex items-center justify-center sticky top-0 z-40 backdrop-blur-sm bg-white bg-opacity-80 ${scrolled && 'shadow-sm'}`}>
             <div className="max-cont flex items-center justify-between gap-3">
                 {/* logo */}
                 <div className="flex items-center gap-3 w-fit">

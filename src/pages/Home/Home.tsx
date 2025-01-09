@@ -3,6 +3,8 @@ import Collection from "./components/collectionGrid";
 import ProductDisplay from "./components/productsDisplay";
 import Services from "./components/Services";
 import Banner from "./components/Banner";
+import ClientReview from "./components/clientReview";
+
 function Home(){
     return (
         <>
@@ -12,6 +14,7 @@ function Home(){
                 <ProductDisplay/>
                 <Services/>
                 <Banner/>
+                <ClientReview/>
             </section>
         </>
     )
