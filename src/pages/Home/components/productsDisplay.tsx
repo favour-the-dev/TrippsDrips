@@ -292,7 +292,7 @@ function ProductDisplay(){
                 </div>
 
                 {/* product grid */}
-                <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 space-y-4 md:space-y-0 gap-12 content-center place-items-center my-5">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 space-y-4 md:space-y-0 gap-12 content-center place-items-center my-5 min-h-min">
                     {
                         products.map((product, index)=>{
                             return(
