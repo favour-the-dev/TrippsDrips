@@ -2,8 +2,8 @@ import { useState } from "react"
 import { FaSliders } from "react-icons/fa6";
 import filledStar from '../../../assets/images/fullstar.png';
 import emptyStar from '../../../assets/images/emptystar.png';
-import ProductCard from "./ProductCard";
-import products from "../../../lib/Products";
+// import ProductCard from "./ProductCard";
+// import products from "../../../lib/Products";
 // @ts-ignore
 import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
