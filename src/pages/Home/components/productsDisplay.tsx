@@ -2,8 +2,8 @@ import { useState } from "react"
 import { FaSliders } from "react-icons/fa6";
 import filledStar from '../../../assets/images/fullstar.png';
 import emptyStar from '../../../assets/images/emptystar.png';
-// import ProductCard from "./ProductCard";
-// import products from "../../../lib/Products";
+import ProductCard from "./ProductCard";
+import products from "../../../lib/Products";
 // @ts-ignore
 import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
@@ -292,25 +292,27 @@ function ProductDisplay(){
                 </div>
 
                 {/* product grid */}
-                {/* <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 space-y-4 md:space-y-0 gap-12 content-center place-items-center my-5 min-h-min">
-                    {
-                        products.map((product, index)=>{
-                            return(
-                                <ProductCard
-                                key={index}
-                                imageUrls={Array.from(product.imageUrls)}
-                                discountVal={product.discountVal}
-                                productTitle={product.productTitle}
-                                productBrand={product.productBrand}
-                                productPrice={product.productPrice}
-                                colors={Array.from(product.colors)}
-                                />
-                            )
-                        })
-                    }
-                </div> */}
+                <div className="w-full min-h-min">
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 space-y-12 md:space-y-0">
+                        {
+                            products.map((product, index)=>{
+                                return(
+                                    <ProductCard
+                                    key={index}
+                                    imageUrls={Array.from(product.imageUrls)}
+                                    discountVal={product.discountVal}
+                                    productTitle={product.productTitle}
+                                    productBrand={product.productBrand}
+                                    productPrice={product.productPrice}
+                                    colors={Array.from(product.colors)}
+                                    />
+                                )
+                            })
+                        }
+                    </div>
+                </div>
                 
-                <button className="btn-transparent self-center md:mt-5">See all Products</button>
+                <button className="btn-transparent self-center md:my-10">See all Products</button>
             </div>
         </>
     )
