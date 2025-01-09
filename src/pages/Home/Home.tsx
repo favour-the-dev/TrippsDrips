@@ -1,6 +1,8 @@
 import Hero from "./components/Hero";
 import Collection from "./components/collectionGrid";
 import ProductDisplay from "./components/productsDisplay";
+import Services from "./components/Services";
+import Banner from "./components/Banner";
 function Home(){
     return (
         <>
@@ -8,6 +10,8 @@ function Home(){
                 <Hero/>
                 <Collection/>
                 <ProductDisplay/>
+                <Services/>
+                <Banner/>
             </section>
         </>
     )

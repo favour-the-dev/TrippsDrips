@@ -3,7 +3,7 @@ import openzip from '../../../assets/images/open_zip-bg.png';
 function Hero(){
     return (
         <>
-            <div className="max-cont flex flex-col md:flex-row items-center gap-4 md:gap-0 h-full">
+            <div className="max-cont flex flex-col md:flex-row items-center gap-4 md:gap-0 h-full mb-10">
                 {/* hero text */}
                 <div className="md:w-1/2 mt-5 h-full flex flex-col gap-12 justify-between">
                     <div className="flex flex-col gap-6 items-start">

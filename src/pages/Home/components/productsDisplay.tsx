@@ -14,7 +14,7 @@ function ProductDisplay(){
     const [maxVal, SetMaxVal] = useState<number>(150000);
     return (
         <>
-            <div className="h-full my-5 max-cont flex flex-col gap-6 items-start justify-between">
+            <div className="h-full my-10 max-cont flex flex-col gap-6 items-start justify-between">
                 <h2 className="font-semibold tracking-wide capitalize text-5xl">Our Products</h2>
 
                 {/* actions */}
@@ -292,7 +292,7 @@ function ProductDisplay(){
                 </div>
 
                 {/* product grid */}
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 space-y-4 md:space-y-0 gap-12 content-center place-items-center min-h-max my-5">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 space-y-4 md:space-y-0 gap-12 content-center place-items-center my-5">
                     {
                         products.map((product, index)=>{
                             return(

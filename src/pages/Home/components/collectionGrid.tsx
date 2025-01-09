@@ -5,7 +5,7 @@ import openzip from '../../../assets/images/open_zip-bg.png';
 function Collection(){
     return (
         <>
-            <div className="h-full mt-5 max-cont flex flex-col gap-12">
+            <div className="h-full my-10 max-cont flex flex-col gap-12">
                 {/* text */}
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
                     <h2 className="md:w-1/2 font-bold capitalize text-5xl">New Style For Latest Collection</h2>
@@ -17,7 +17,7 @@ function Collection(){
                 </div>
                 {/* grid */}
                 <div className="grid md:grid-cols-5 md:grid-rows-2 gap-5">
-                    <div className="relative col-span-2 md:col-span-3 row-span-2 rounded-xl p-5 bg-gray-200">
+                    <div className="relative col-span-2 md:col-span-3 row-span-2 rounded-xl p-5 bg-gray-100">
                         <div className="w-1/2 flex flex-col gap-8 items-start">
                             <h2 className="text-4xl md:text-6xl tracking-wider">New Running Style</h2>
                             <p className="uppercase text-xl md:text-3xl">Now Available</p>
@@ -30,7 +30,7 @@ function Collection(){
                         <img src={openzip} alt="" className='absolute rotate-180 w-[18%] bottom-0 left-0'/>
                     </div>
 
-                    <div className="col-span-2 relative rounded-xl p-5 bg-gray-200">
+                    <div className="col-span-2 relative rounded-xl p-5 bg-gray-100">
                         <div className="w-1/2 flex flex-col gap-8 items-start">
                             <h2 className="text-4xl md:text-5xl tracking-wider">SPORTS ESSENTIALS</h2>
                             <p className="uppercase text-xl md:text-3xl">MOVE AND EXPLORE  </p>

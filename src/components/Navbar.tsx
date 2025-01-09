@@ -65,7 +65,7 @@ function Navbar(){
                     {/* mobile slide nav */}
                     <div className={`${navOpen ? 'block' : 'hidden'} bg-black bg-opacity-60 backdrop-blur-sm w-screen h-screen absolute left-0 top-0`}/>
                     <div className={`flex flex-col gap-8 space-y-8 absolute duration-300 ease-in-out transform shadow-md 
-                        ${navOpen ? "translate-x-0" : "-translate-x-full"} top-0 left-0  w-fit p-5 bg-black text-white h-screen`}>
+                        ${navOpen ? "translate-x-0" : "-translate-x-full"} min-w-fit w-full max-w-[75%] top-0 left-0 p-5 bg-black text-white h-screen`}>
                         <div className="w-full flex items-center justify-between">
                             <div className="flex items-center gap-3 w-fit">
                                 <img src={logo} alt="" className="rounded-full w-12 h-12 border-4 border-white"/>
@@ -81,14 +81,24 @@ function Navbar(){
                                 placeholder="Search..." 
                                 className="focus:outline-none px-5 py-3 text-black border rounded-full"/>
                             </label>
-                            <FaShoppingBag className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear cursor-pointer"/>
-                            <IoPerson className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear cursor-pointer"/>
                         </div>
-                        <div className="flex flex-col items-start gap-4 space-y-8 font-semibold text-3xl uppercase">
+                        <div className="flex flex-col items-start gap-4 space-y-4 font-semibold text-3xl uppercase">
                             <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline">Men</a>
                             <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline">Women</a>
                             <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline">Categories</a>
                             <a href="" className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline">Brands</a>
+                            <a 
+                            href="" 
+                            className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline flex items-center gap-2">
+                                <FaShoppingBag className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear cursor-pointer"/>
+                                Cart
+                            </a>
+                            <a 
+                            href="" 
+                            className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear underline flex items-center gap-2">
+                                <IoPerson className="hover:scale-105 hover:text-orange-600 duration-200 ease-linear cursor-pointer"/>
+                                Profile
+                            </a>
                         </div>
                     </div>
                 </div>
