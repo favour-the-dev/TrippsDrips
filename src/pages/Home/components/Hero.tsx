@@ -1,5 +1,6 @@
 import herobg from "../../../assets/images/hero_bg.png";
 import openzip from '../../../assets/images/open_zip-bg.png';
+import Counter from "../../../components/Counter";
 function Hero(){
     return (
         <>
@@ -14,11 +15,11 @@ function Hero(){
                     <div className="flex flex-col gap-5">
                         <div className="flex items-center gap-5">
                             <div className="flex flex-col gap-1">
-                                <span className="font-bold text-4xl">500+</span>
+                                <span className="font-bold text-4xl flex items-center"><Counter targetNumber={500} duration={2500} />+</span>
                                 <span className="text-gray-500">Satisfied Customers</span>
                             </div>
                             <div className="flex flex-col gap-1">
-                                <span className="font-bold text-4xl">30+</span>
+                                <span className="font-bold text-4xl flex items-center"><Counter targetNumber={30} duration={3000} />+</span>
                                 <span className="text-gray-500">Trusted shoe Brands</span>
                             </div>
                         </div>
