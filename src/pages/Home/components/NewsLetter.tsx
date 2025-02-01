@@ -10,7 +10,7 @@ function NewsLetter() {
                 <div className="bg-gray-100 relative w-full min-h-[400px] flex flex-col items-center justify-center overflow-hidden">
                     <img src={star} alt="" className='w-[300px] h-[300px] absolute bottom-[-5%] left-[-35%] lg:left-[-5%] opacity-70 z-[1]'/>
                     <div className="md:w-[70%] mx-auto flex flex-col justify-center items-center gap-4 relative z-[2]">
-                            <h2 className='text-3xl md:text-5xl tracking-wider font-bold text-center'>Subscribe to our news letter</h2>
+                            <h2 className='text-3xl md:text-5xl capitalize font-bold text-center'>Subscribe to our news letter</h2>
                             <p className='text-gray-500 text-center text-sm'>The ultimate newsletter to get the latest updates on our products and offers for you, giving you the latest fashion trends in footwear.</p>
                             <label htmlFor="newsletter" className='w-[90%] md:w-[50%] relative'>
                                 <input type="email" placeholder='Enter email address' 
